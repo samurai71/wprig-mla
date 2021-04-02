@@ -28,6 +28,7 @@ use function dynamic_sidebar;
 class Component implements Component_Interface, Templating_Component_Interface {
 
 	const PRIMARY_SIDEBAR_SLUG = 'sidebar-1';
+	const FOOTER_WIDGETS_SLUG  = 'sidebar-2';
 
 	/**
 	 * Gets the unique identifier for the theme component.
@@ -57,6 +58,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return array(
 			'is_primary_sidebar_active' => array( $this, 'is_primary_sidebar_active' ),
 			'display_primary_sidebar'   => array( $this, 'display_primary_sidebar' ),
+			'is_footer_widgets_active'  => array( $this, 'is_footer_widgets_active' ),
+			'display_footer_widgets'    => array( $this, 'display_footer_widgets' ),
 		);
 	}
 
@@ -73,6 +76,17 @@ class Component implements Component_Interface, Templating_Component_Interface {
 				'after_widget'  => '</section>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Footer widgets', 'wp-rig' ),
+				'id'            => static::FOOTER_WIDGETS_SLUG,
+				'description'   => esc_html__( 'Add widgets here.', 'wp-rig' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
 			)
 		);
 	}
@@ -105,9 +119,24 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	}
 
 	/**
+	 * Checks whether the primary sidebar is active.
+	 *
+	 * @return bool True if the primary sidebar is active, false otherwise.
+	 */
+	public function is_footer_widgets_active() : bool {
+		return (bool) is_active_sidebar( static::FOOTER_WIDGETS_SLUG );
+	}
+
+	/**
 	 * Displays the primary sidebar.
 	 */
 	public function display_primary_sidebar() {
 		dynamic_sidebar( static::PRIMARY_SIDEBAR_SLUG );
+	}
+	/**
+	 * Displays the primary sidebar.
+	 */
+	public function display_footer_sidebar() {
+		dynamic_sidebar( static::FOOTER_WIDGETS_SLUG );
 	}
 }

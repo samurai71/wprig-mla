@@ -15,6 +15,7 @@ namespace WP_Rig\WP_Rig;
 
 	<footer id="colophon" class="site-footer">
 		<?php get_template_part( 'template-parts/footer/info' ); ?>
+		<?php wp_rig()->is_footer_sidebar_active(); ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
