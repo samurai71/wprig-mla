@@ -1,1 +1,8 @@
-{}
+{
+    "theme": {
+    "slug": "mla",
+    "name": "MLA",
+    "author": "Mark Landeryou",
+    "PHPNamespace": "WP_Rig\\WP_Rig"
+  }
+}
