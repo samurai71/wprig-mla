@@ -11,12 +11,7 @@ namespace WP_Rig\WP_Rig;
 
 <div class="site-info">
 	&copy; Copyright (c) 2021 by Mark Landeryou Artisan
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wp-rig' ) ); ?>">
-		<?php
-		/* translators: %s: CMS name, i.e. WordPress. */
-		printf( esc_html__( 'Proudly powered by %s', 'wp-rig' ), 'WordPress' );
-		?>
-	</a>
+	
 	<span class="sep"> | </span>
 	<?php
 	/* translators: Theme name. */
