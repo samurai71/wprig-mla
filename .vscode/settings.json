@@ -2,5 +2,10 @@
     "phpcs.enable": true,
     "phpcs.composerJsonPath": "composer.json",
     "phpcs.standard": "WordPress",
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "cSpell.words": [
+        "Templating",
+        "bloginfo",
+        "phpcs"
+    ]
 }
