@@ -10,6 +10,7 @@ namespace WP_Rig\WP_Rig;
 ?>
 
 <div class="site-info">
+	&copy; Copyright (c) 2021
 	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wp-rig' ) ); ?>">
 		<?php
 		/* translators: %s: CMS name, i.e. WordPress. */
