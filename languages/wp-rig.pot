@@ -185,7 +185,7 @@ msgid "Add widgets here."
 msgstr ""
 
 #: inc/Sidebars/Component.php:83
-msgid "Footer widgets"
+msgid "Footer Widgets"
 msgstr ""
 
 #. translators: %s: stylesheet handle

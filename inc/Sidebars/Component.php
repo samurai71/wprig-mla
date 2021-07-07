@@ -80,7 +80,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		);
 		register_sidebar(
 			array(
-				'name'          => esc_html__( 'Footer widgets', 'wp-rig' ),
+				'name'          => esc_html__( 'Footer Widgets', 'wp-rig' ),
 				'id'            => static::FOOTER_WIDGETS_SLUG,
 				'description'   => esc_html__( 'Add widgets here.', 'wp-rig' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
