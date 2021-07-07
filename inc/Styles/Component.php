@@ -360,7 +360,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 
 		$google_fonts = array(
 			'Caveat' => array( '700' ),
-			'Crimson Text'     => array( '400', '400i', '600', '600i' ),
+			'Open Sans'     => array( '300', '300i','400', '400i' ),
 		);
 
 		/**
